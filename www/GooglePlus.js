@@ -25,13 +25,14 @@ GooglePlus.prototype.getSigningCertificateFingerprint = function (successCallbac
   cordova.exec(successCallback, errorCallback, "GooglePlus", "getSigningCertificateFingerprint", []);
 };
 
-GooglePlus.install = function () {
-  if (!window.plugins) {
-    window.plugins = {};
-  }
+// GooglePlus.install = function () {
+//   if (!window.plugins) {
+//     window.plugins = {};
+//   }
 
-  window.plugins.googleplus = new GooglePlus();
-  return window.plugins.googleplus;
-};
+//   window.plugins.googleplus = new GooglePlus();
+//   return window.plugins.googleplus;
+// };
 
-cordova.addConstructor(GooglePlus.install);
+// cordova.addConstructor(GooglePlus.install);
+module.exports = new GooglePlus();
